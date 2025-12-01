@@ -1,0 +1,7 @@
+path: C:\Users\diego\PycharmProjects\yolov8_dr2\Data\
+train: C:\Users\diego\PycharmProjects\yolov8_dr2\Data\train\
+val: C:\Users\diego\PycharmProjects\yolov8_dr2\Data\val\
+test:
+
+names:
+    0: Lego
