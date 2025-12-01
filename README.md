@@ -26,3 +26,14 @@ This dataset is suitable for:
 
 The dataset currently includes the following class:
 - Lego (Mindstorm EV3 Brick)
+
+---
+
+## 👥 Authors
+D. A. Mata Robles, R. C. Martínez-Montejano, R. C. Martínez-Montejano, J. J. Jaime-Rodriguez
+
+--- 
+
+## 🙌 Acknowledgments
+D.A.M.R and L.J.O.G. thank the Potosino Council of Science and Technology (COPOCYT) for the support provided through Trust Project 23871, from the 2023-01 Call.
+---
