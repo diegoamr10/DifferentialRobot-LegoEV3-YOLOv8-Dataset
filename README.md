@@ -25,18 +25,45 @@ The dataset currently includes the following class:
 - Lego (Mindstorm EV3 Brick)
 
 ---
-### 🚀 Usage
-git clone [https://github.com/tu-repo/lego-ev3-dataset.git](https://github.com/diegoamr10/DifferentialRobot-LegoEV3-YOLOv8-Dataset.git
-cd lego-ev3-dataset
+🚀 Usage
+1. Clone the repository
+  git clone https://github.com/diegoamr10/DifferentialRobot-LegoEV3-YOLOv8-Dataset.git
+  cd DifferentialRobot-LegoEV3-YOLOv8-Dataset
+
+2. Install Ultralytics (YOLOv8)
 pip install ultralytics
+
+3. Train YOLOv8 with this dataset
 yolo detect train data=dataset.yaml model=yolov8m.pt epochs=100 imgsz=640
-  Where:
-    dataset.yaml contains the paths to the train/val folders and class names
 
-  yolov8n.pt can be replaced with yolov8s.pt, yolov8m.pt, etc.
+Notes:
+dataset.yaml defines the path to train/val images and class names.
+You may use yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.
 
-Using the Trained Model (best.pt)
-  yolo detect predict model=best.pt source=folder_or_video
+For faster training:
+  yolo detect train data=dataset.yaml model=yolov8n.pt epochs=50 imgsz=640
+
+4. Run Inference Using the Trained Model (best.pt)
+
+Predict on a folder:
+  yolo detect predict model=best.pt source=images/
+
+Predict on a video:
+  yolo detect predict model=best.pt source=video.mp4
+
+Predict using a webcam:
+  yolo detect predict model=best.pt source=0
+
+📁 Folder Structure (Example)
+  Dataset/
+  │── images/
+  │   ├── train/
+  │   ├── val/
+  │── labels/
+  │   ├── train/
+  │   ├── val/
+  │── dataset.yaml
+  │── best.pt   (optional: trained model)
 ---
 
 ## 👥 Authors
